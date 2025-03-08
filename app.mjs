@@ -3,6 +3,7 @@ import cors from "cors";
 import userRoutes from "./routes/userRoutes.js";
 import connectToDb from "./db/db.js";
 
+const app = express();
 app.use(cors());
 app.use(express.json());
 
@@ -18,5 +19,5 @@ connectToDb()
 app.use("/api",userRoutes);
 
 app.listen(5000,()=>{
-    console,log("server is listening 5000");
+    console.log("server is listening 5000");
 });
