@@ -94,6 +94,7 @@ message : "user not found",
 };
 
 // get a specific user
+
 const getUser = async(req,res) =>{
     try{
 const {id} = req.params;
@@ -115,4 +116,4 @@ res.status(500).json({message : "Internal server error", error});
     }
 };
 
-export {getAllUsers, updateUser, deleteUser, getUser, createUser};
+export {getAllUsers, updateUser, deleteUser, getUser, createUser}
